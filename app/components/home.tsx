@@ -2,7 +2,8 @@
 import { Vortex } from "@/components/ui/vortex";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
 import React from "react";
 
 export default function VortexPortfolio() {
@@ -43,7 +44,7 @@ export default function VortexPortfolio() {
             View Projects
           </button>
           <button
-             className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition duration-200 rounded-lg text-lg font-semibold"
+            className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition duration-200 rounded-lg text-lg font-semibold"
             onClick={() => router.push("/contact")}
           >
             Contact Me
@@ -55,23 +56,64 @@ export default function VortexPortfolio() {
           transition={{ duration: 1, delay: 1.5 }}
           className="flex items-center gap-6 mt-8"
         >
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-gray-400 transition">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-gray-400 transition">
+          <a
+            href="https://www.linkedin.com/in/sajeer-k-00731110b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-gray-400 transition"
+          >
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-gray-400 transition">
+          <a
+            href="https://x.com/sajeer_k_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-gray-400 transition"
+          >
             <FaTwitter />
           </a>
-          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-gray-400 transition">
+          <a
+            href="https://www.instagram.com/sajeer.k__/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-gray-400 transition"
+          >
             <FaInstagram />
-          </a>
-          <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-gray-400 transition">
-            <FaWhatsapp />
           </a>
         </motion.div>
       </Vortex>
+      {/* Floating AI Chatbot Button with Wave Animation */}
+      <div className="fixed bottom-6 right-6 flex items-center justify-center"  onClick={(event) => {
+            event.stopPropagation();
+            window.open("https://chat.openai.com/", "_blank");
+          }}>
+        <motion.div
+          className="absolute w-16 h-16 bg-blue-500 rounded-full"
+          animate={{ scale: [1, 1.3, 1], opacity: [0.6, 0.3, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeOut" }}
+        />
+        <motion.div
+          className="absolute w-20 h-20 bg-blue-500 rounded-full opacity-50"
+          onClick={(event) => {
+            event.stopPropagation();
+            window.open("https://chat.openai.com/", "_blank");
+          }}
+          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.2, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
+        />
+        <button
+          onClick={(event) => {
+            event.stopPropagation();
+            window.open("https://chat.openai.com/", "_blank");
+          }}
+          className="relative bg-blue-500 p-4 rounded-full shadow-lg hover:bg-blue-600 transition"
+        >
+          <FaRobot className="text-white text-3xl"  onClick={(event) => {
+            event.stopPropagation();
+            window.open("https://chat.openai.com/", "_blank");
+          }}/>
+        </button>
+      </div>
     </div>
   );
 }

@@ -5,20 +5,51 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 const projects = [
-  { id: 1, title: "E-Commerce Website", description: "A fully functional e-commerce platform with payment integration.", image: "https://source.unsplash.com/400x300/?ecommerce" },
-  { id: 2, title: "Portfolio Website", description: "A personal portfolio showcasing skills and projects.", image: "https://source.unsplash.com/400x300/?portfolio" },
-  { id: 3, title: "Social Media App", description: "A social networking app with real-time chat features.", image: "https://source.unsplash.com/400x300/?socialmedia" },
-  { id: 4, title: "Blog Platform", description: "A blogging website with rich text editor and comments section.", image: "https://source.unsplash.com/400x300/?blog" },
-  { id: 5, title: "Task Management Tool", description: "A web application to manage and track daily tasks.", image: "https://source.unsplash.com/400x300/?taskmanagement" },
-  { id: 6, title: "Weather Forecast App", description: "A real-time weather forecasting app using API integration.", image: "https://source.unsplash.com/400x300/?weather" },
+  {
+    id: 1,
+    title: "E-Commerce Website",
+    description:
+      "A fully functional e-commerce platform with payment integration.",
+    image: "https://source.unsplash.com/400x300/?ecommerce",
+  },
+  // {
+  //   id: 2,
+  //   title: "Portfolio Website",
+  //   description: "A personal portfolio showcasing skills and projects.",
+  //   image: "https://source.unsplash.com/400x300/?portfolio",
+  // },
+  {
+    id: 3,
+    title: "Social Media App",
+    description: "A social networking app with real-time chat features.",
+    image: "https://source.unsplash.com/400x300/?socialmedia",
+  },
+  {
+    id: 4,
+    title: "Blog Platform",
+    description:
+      "A blogging website with rich text editor and comments section.",
+    image: "https://source.unsplash.com/400x300/?blog",
+  },
+  // {
+  //   id: 5,
+  //   title: "Task Management Tool",
+  //   description: "A web application to manage and track daily tasks.",
+  //   image: "https://source.unsplash.com/400x300/?taskmanagement",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Weather Forecast App",
+  //   description: "A real-time weather forecasting app using API integration.",
+  //   image: "https://source.unsplash.com/400x300/?weather",
+  // },
 ];
-
 
 export default function PortfolioPage() {
   const router = useRouter();
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center overflow-hidden relative">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center overflow-hidden relative px-4">
       <Vortex
         backgroundColor="black"
         className="absolute inset-0 flex flex-col items-center justify-center px-4 md:px-10 py-6 w-full h-full"
