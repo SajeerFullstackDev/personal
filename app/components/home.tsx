@@ -2,8 +2,7 @@
 import { Vortex } from "@/components/ui/vortex";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FaRobot } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaRobot } from "react-icons/fa";
 import React from "react";
 
 export default function VortexPortfolio() {
@@ -79,6 +78,14 @@ export default function VortexPortfolio() {
             className="text-white text-3xl hover:text-gray-400 transition"
           >
             <FaInstagram />
+          </a>
+          <a
+            href="https://wa.me/+918921090245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-gray-400 transition"
+          >
+            <FaWhatsapp />
           </a>
         </motion.div>
       </Vortex>
